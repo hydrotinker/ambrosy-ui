@@ -1,25 +1,39 @@
-.aui-button-container {
-    @apply flex
+.aui-button {
+    @apply inline-block cursor-pointer
 }
 
-.aui-button-left, .aui-button-center, .aui-button-right {
+.aui-button-container {
+    @apply flex border border-transparent transition
+}
+
+.aui-button-size-small .aui-button-left {
+    @apply pl-2 py-1
+}
+.aui-button-size-small .aui-button-center {
     @apply px-2 py-1
 }
-
-.aui-button-basic.aui-button-primary {
-    @apply bg-gray-800 text-white
+.aui-button-size-small .aui-button-right {
+    @apply pr-2 py-1
 }
 
-.aui-button-basic.aui-button-secondary {
-    @apply bg-gray-300 text-gray-800
+.aui-button-size-medium .aui-button-left {
+    @apply pl-4 py-2
+}
+.aui-button-size-medium .aui-button-center {
+    @apply px-4 py-2
+}
+.aui-button-size-medium .aui-button-right {
+    @apply pr-4 py-2
 }
 
-.aui-button-outline.aui-button-primary {
-    @apply border border-gray-800 text-gray-800
+.aui-button-size-large .aui-button-left {
+    @apply pl-6 py-3
 }
-
-.aui-button-outline.aui-button-secondary {
-    @apply border border-gray-300 text-gray-800
+.aui-button-size-large .aui-button-center {
+    @apply px-6 py-3
+}
+.aui-button-size-large .aui-button-right {
+    @apply pr-6 py-3
 }
 
 .aui-button-rounded-none {
@@ -31,13 +45,167 @@
 }
 
 .aui-button-rounded-medium {
-    @apply rounded
+    @apply rounded-md
 }
 
 .aui-button-rounded-large {
-    @apply rounded-lg
+    @apply rounded-xl
 }
 
 .aui-button-rounded-full {
     @apply rounded-full
 }
+
+/* region Basic */
+
+.aui-button-basic.aui-button-primary {
+    @apply bg-gray-800 text-white
+}
+
+.aui-button-basic.aui-button-primary:hover {
+    @apply bg-gray-700
+}
+
+.aui-button-basic.aui-button-secondary {
+    @apply bg-gray-200 text-gray-800
+}
+
+.aui-button-basic.aui-button-secondary:hover {
+    @apply bg-gray-300
+}
+
+.aui-button-basic.aui-button-danger {
+    @apply bg-red-600 text-white
+}
+
+.aui-button-basic.aui-button-danger:hover {
+    @apply bg-red-500
+}
+
+.aui-button-basic.aui-button-success {
+    @apply bg-green-600 text-white
+}
+
+.aui-button-basic.aui-button-success:hover {
+    @apply bg-green-500
+}
+
+.aui-button-basic.aui-button-warning {
+    @apply bg-amber-600 text-white
+}
+
+.aui-button-basic.aui-button-warning:hover {
+    @apply bg-amber-500
+}
+
+.aui-button-basic.aui-button-info {
+    @apply bg-sky-600 text-white
+}
+
+.aui-button-basic.aui-button-info:hover {
+    @apply bg-sky-500
+}
+
+/* endregion */
+/* region Outline */
+
+.aui-button-outline.aui-button-primary {
+    @apply border-gray-800 text-gray-800
+}
+
+.aui-button-outline.aui-button-primary:hover {
+    @apply bg-gray-800/5
+}
+
+.aui-button-outline.aui-button-secondary {
+    @apply border-gray-300 text-gray-500
+}
+
+.aui-button-outline.aui-button-secondary:hover {
+    @apply bg-gray-800/5
+}
+
+.aui-button-outline.aui-button-danger {
+    @apply border-red-600 text-red-600
+}
+
+.aui-button-outline.aui-button-danger:hover {
+    @apply bg-red-800/5
+}
+
+.aui-button-outline.aui-button-success {
+    @apply border-green-600 text-green-600
+}
+
+.aui-button-outline.aui-button-success:hover {
+    @apply bg-green-800/5
+}
+
+.aui-button-outline.aui-button-warning {
+    @apply border-amber-600 text-amber-600
+}
+
+.aui-button-outline.aui-button-warning:hover {
+    @apply bg-amber-800/5
+}
+
+.aui-button-outline.aui-button-info {
+    @apply border-sky-600 text-sky-600
+}
+
+.aui-button-outline.aui-button-info:hover {
+    @apply bg-sky-800/5
+}
+
+/* endregion */
+/* region Link */
+
+.aui-button-link.aui-button-primary {
+    @apply text-gray-800
+}
+
+.aui-button-link.aui-button-primary:hover {
+    @apply bg-gray-800/5
+}
+
+.aui-button-link.aui-button-secondary {
+    @apply text-gray-500
+}
+
+.aui-button-link.aui-button-secondary:hover {
+    @apply bg-gray-800/5
+}
+
+.aui-button-link.aui-button-danger {
+    @apply text-red-600
+}
+
+.aui-button-link.aui-button-danger:hover {
+    @apply bg-red-800/5
+}
+
+.aui-button-link.aui-button-success {
+    @apply text-green-600
+}
+
+.aui-button-link.aui-button-success:hover {
+    @apply bg-green-800/5
+}
+
+.aui-button-link.aui-button-warning {
+    @apply text-amber-600
+}
+
+.aui-button-link.aui-button-warning:hover {
+    @apply bg-amber-800/5
+}
+
+.aui-button-link.aui-button-info {
+    @apply text-sky-600
+}
+
+.aui-button-link.aui-button-info:hover {
+    @apply bg-sky-800/5
+}
+
+/* endregion */

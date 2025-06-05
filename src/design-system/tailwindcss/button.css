@@ -1,9 +1,9 @@
 .aui-button {
-    @apply inline-block cursor-pointer
+    @apply inline-block
 }
 
 .aui-button-container {
-    @apply flex border border-transparent transition
+    @apply flex border border-transparent transition cursor-pointer
 }
 
 .aui-button-size-small .aui-button-left {
@@ -54,6 +54,10 @@
 
 .aui-button-rounded-full {
     @apply rounded-full
+}
+
+.aui-button-disabled {
+    @apply !bg-gray-300 !cursor-default pointer-events-none
 }
 
 /* region Basic */

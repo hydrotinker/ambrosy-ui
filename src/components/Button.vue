@@ -11,7 +11,6 @@ export interface ButtonProps {
     rounded?: ButtonRounded
     label?: string,
     disabled?: boolean
-    loading?: boolean
 }
 
 const props = withDefaults(defineProps<ButtonProps>(), {
@@ -28,6 +27,8 @@ const props = withDefaults(defineProps<ButtonProps>(), {
         <div
             :class="[
             'aui-button-container',
+
+            {'aui-button-disabled': disabled},
 
             {'aui-button-basic': variant === 'basic'},
             {'aui-button-outline': variant === 'outline'},

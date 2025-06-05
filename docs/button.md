@@ -104,6 +104,14 @@ import Button from 'ambrosy-ui/button';
 <Button label="Full" rounded="full" />
 ```
 
+## States
+
+<Button class="mr-2" label="Disabled" :disabled="true" />
+
+```vue
+<Button label="Disabled" :disabled="true" />
+```
+
 ## Slots
 
 <Button>

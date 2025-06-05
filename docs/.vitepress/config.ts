@@ -16,7 +16,8 @@ export default defineConfig({
       {
         text: 'Form Elements',
         items: [
-          { text: 'Button', link: '/button' }
+          { text: 'Button', link: '/button' },
+          { text: 'Checkbox', link: '/checkbox' }
         ]
       },
       {

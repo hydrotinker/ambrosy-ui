@@ -1,0 +1,15 @@
+.aui-checkbox {
+    @apply flex items-center cursor-pointer select-none transition
+}
+
+.aui-checkbox-input {
+    @apply hidden
+}
+
+.aui-checkbox-container {
+    @apply shrink-0 w-5 h-5 mr-3 bg-white border border-gray-300 rounded relative transition
+}
+
+.aui-checkbox-input:checked + .aui-checkbox-container {
+    @apply bg-gray-800 border-gray-800
+}

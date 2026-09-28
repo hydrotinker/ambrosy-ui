@@ -1,8 +1,8 @@
 {
   "name": "@ambrosy-ui/theme-getisekaid",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Getisekaid design system (theme) for @ambrosy-ui/components",
-  "private": true,
+  "private": false,
   "type": "module",
   "sideEffects": [
     "*.css"

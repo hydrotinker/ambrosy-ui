@@ -1,6 +1,6 @@
 {
   "name": "@ambrosy-ui/components",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Unstyled Vue 3 UI component kit",
   "type": "module",
   "sideEffects": false,

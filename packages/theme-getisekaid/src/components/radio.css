@@ -1,0 +1,26 @@
+/* Radio styling for @ambrosy-ui/theme-getisekaid.
+ * Targets the `.ab-radio` BEM hooks. Flat selectors + @apply utilities. */
+
+.ab-radio {
+  @apply inline-flex items-center gap-2 font-base cursor-pointer;
+}
+
+.ab-radio__input {
+  @apply size-4 m-0 cursor-pointer accent-primary;
+}
+
+.ab-radio__input:focus-visible {
+  @apply outline-none ring-[3px] ring-primary/40;
+}
+
+.ab-radio__text {
+  @apply text-base text-text;
+}
+
+.ab-radio--disabled {
+  @apply cursor-not-allowed opacity-60;
+}
+
+.ab-radio--disabled .ab-radio__input {
+  @apply cursor-not-allowed;
+}

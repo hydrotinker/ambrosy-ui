@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// Token CSS custom properties for @ambrosy-ui/theme-default.
+//
+// Emits the SCSS values from `_variables.scss` as `:root` CSS variables that the
+// component partials consume. Override any `--ab-*` var at runtime to retheme
+// without a rebuild.
+// -----------------------------------------------------------------------------
+
+@use 'variables' as *;
+
+:root {
+  // Color
+  --ab-color-primary: #{$color-primary};
+  --ab-color-primary-hover: #{$color-primary-hover};
+  --ab-color-danger: #{$color-danger};
+  --ab-color-danger-hover: #{$color-danger-hover};
+  --ab-color-text: #{$color-text};
+  --ab-color-text-muted: #{$color-text-muted};
+  --ab-color-border: #{$color-border};
+  --ab-color-surface: #{$color-surface};
+  --ab-color-surface-muted: #{$color-surface-muted};
+
+  // Spacing
+  --ab-space-1: #{$space-1};
+  --ab-space-2: #{$space-2};
+  --ab-space-3: #{$space-3};
+  --ab-space-4: #{$space-4};
+  --ab-space-6: #{$space-6};
+
+  // Radius
+  --ab-radius-sm: #{$radius-sm};
+  --ab-radius-md: #{$radius-md};
+  --ab-radius-lg: #{$radius-lg};
+
+  // Typography
+  --ab-font-family-base: #{$font-family-base};
+  --ab-font-size-sm: #{$font-size-sm};
+  --ab-font-size-md: #{$font-size-md};
+  --ab-font-size-lg: #{$font-size-lg};
+  --ab-font-weight-medium: #{$font-weight-medium};
+  --ab-font-weight-bold: #{$font-weight-bold};
+
+  // Misc
+  --ab-focus-ring: #{$focus-ring};
+  --ab-transition-base: #{$transition-base};
+}

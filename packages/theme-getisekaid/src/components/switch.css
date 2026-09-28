@@ -1,0 +1,36 @@
+/* Switch styling for @ambrosy-ui/theme-getisekaid.
+ * Targets the `.ab-switch` BEM hooks. Flat selectors + @apply utilities. */
+
+.ab-switch {
+  @apply inline-flex items-center gap-2 font-base;
+}
+
+.ab-switch__control {
+  @apply relative inline-flex items-center shrink-0 w-10 h-6 p-0 border-none
+    rounded-full bg-border cursor-pointer transition-[background-color];
+}
+
+.ab-switch__control:focus-visible {
+  @apply outline-none ring-[3px] ring-primary/40;
+}
+
+.ab-switch__control:disabled {
+  @apply cursor-not-allowed opacity-60;
+}
+
+.ab-switch__thumb {
+  @apply absolute left-[0.1875rem] size-[1.125rem] rounded-full bg-surface
+    transition-transform;
+}
+
+.ab-switch__text {
+  @apply text-base text-text;
+}
+
+.ab-switch--on .ab-switch__control {
+  @apply bg-primary;
+}
+
+.ab-switch--on .ab-switch__thumb {
+  @apply translate-x-4;
+}

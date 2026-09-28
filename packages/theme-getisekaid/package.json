@@ -1,0 +1,28 @@
+{
+  "name": "@ambrosy-ui/theme-getisekaid",
+  "version": "0.0.0",
+  "description": "Getisekaid design system (theme) for @ambrosy-ui/components",
+  "private": true,
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "main": "./dist/theme-getisekaid.css",
+  "exports": {
+    ".": "./dist/theme-getisekaid.css",
+    "./css": "./dist/theme-getisekaid.css"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tailwindcss -i src/index.css -o dist/theme-getisekaid.css",
+    "dev": "tailwindcss -i src/index.css -o dist/theme-getisekaid.css --watch",
+    "clean": "rm -rf dist .turbo"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
+  }
+}

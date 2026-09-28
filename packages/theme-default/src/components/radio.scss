@@ -1,0 +1,37 @@
+// Radio styling for @ambrosy-ui/theme-default.
+// Targets the `.ab-radio` BEM hooks emitted by @ambrosy-ui/components.
+
+.ab-radio {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ab-space-2);
+  font-family: var(--ab-font-family-base);
+  cursor: pointer;
+
+  &__input {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    accent-color: var(--ab-color-primary);
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--ab-focus-ring);
+    }
+  }
+
+  &__text {
+    font-size: var(--ab-font-size-md);
+    color: var(--ab-color-text);
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+
+    .ab-radio__input {
+      cursor: not-allowed;
+    }
+  }
+}

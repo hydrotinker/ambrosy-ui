@@ -1,0 +1,20 @@
+// -----------------------------------------------------------------------------
+// @ambrosy-ui/theme-default — entry
+//
+// A self-contained design system for @ambrosy-ui/components: emits the token
+// `:root` CSS variables and the global component styling. Import once:
+//
+//   import '@ambrosy-ui/theme-default/css'   // prebuilt CSS
+//   // or, from SCSS:  @use '@ambrosy-ui/theme-default/scss';
+// -----------------------------------------------------------------------------
+
+@forward 'variables';
+
+@use 'tokens';
+@use 'components/button';
+@use 'components/input';
+@use 'components/textarea';
+@use 'components/select';
+@use 'components/checkbox';
+@use 'components/radio';
+@use 'components/switch';

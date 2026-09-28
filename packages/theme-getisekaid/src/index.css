@@ -1,0 +1,62 @@
+/* -----------------------------------------------------------------------------
+ * @ambrosy-ui/theme-getisekaid — entry (Tailwind CSS v4)
+ *
+ * A self-contained design system for @ambrosy-ui/components. Its design tokens
+ * are declared with Tailwind's `@theme`, which both emits them as `:root` CSS
+ * variables (override any `--color-*`/`--radius-*` at runtime to retheme) and
+ * generates the utilities the component partials consume via `@apply`.
+ *
+ * Only the theme + utilities layers are imported (no Preflight reset) and no
+ * `@source` is declared, so the compiled output stays a small, injectable
+ * stylesheet: just the token vars + the `.ab-*` component rules. Import once:
+ *
+ *   import '@ambrosy-ui/theme-getisekaid/css'   // prebuilt CSS
+ * -------------------------------------------------------------------------- */
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@theme {
+  /* Color — warmer, higher-contrast "isekai" palette */
+  --color-primary: #e8590c;
+  --color-primary-hover: #c64a07;
+  --color-danger: #b4232a;
+  --color-danger-hover: #8f1a20;
+  --color-text: #1b1714;
+  --color-text-muted: #7a6f66;
+  --color-border: #d8c9b8;
+  --color-surface: #fdf8f2;
+  --color-surface-muted: #f0e6d8;
+
+  --color-bg-50: #0e1013;
+  --color-bg-100: #15181d;
+  --color-bg-200: #1b1f25;
+  --color-bg-300: #232831;
+  --color-bg-400: #2c323c;
+
+  --color-text-50: #eef1f5;
+  --color-text-100: #b8bfca;
+  --color-text-200: #7d8590;
+  --color-text-300: #565d67;
+
+  --color-stroke-400: rgba(255, 255, 255, 0.06);
+  --color-stroke-700: rgba(255, 255, 255, 0.1);
+
+  --color-accent-400: #e84a7a;
+  --color-glow-400: rgba(232, 74, 122, 0.35);
+
+  /* Typography */
+  --font-display: "Oxanium", "Exo 2", ui-sans-serif, sans-serif;
+  --font-base: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono:
+    "JetBrains Mono", "Fira Code", "Cascadia Code", ui-monospace, monospace;
+}
+
+@import "./components/button.css";
+@import "./components/input.css";
+@import "./components/textarea.css";
+@import "./components/select.css";
+@import "./components/checkbox.css";
+@import "./components/radio.css";
+@import "./components/switch.css";

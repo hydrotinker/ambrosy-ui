@@ -1,0 +1,22 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview --port 4173",
+    "lint": "echo \"(docs) no lint configured\"",
+    "clean": "rm -rf .vitepress/dist .vitepress/cache .turbo"
+  },
+  "dependencies": {
+    "@ambrosy-ui/components": "workspace:*",
+    "@ambrosy-ui/theme-default": "workspace:*",
+    "@ambrosy-ui/theme-getisekaid": "workspace:*"
+  },
+  "devDependencies": {
+    "vitepress": "^1.4.0",
+    "vue": "^3.5.11"
+  }
+}

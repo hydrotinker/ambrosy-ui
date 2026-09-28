@@ -1,0 +1,28 @@
+{
+  "name": "@ambrosy-ui/theme-default",
+  "version": "0.0.0",
+  "description": "Default design system (theme) for @ambrosy-ui/components",
+  "type": "module",
+  "sideEffects": [
+    "*.css",
+    "*.scss"
+  ],
+  "main": "./dist/theme-default.css",
+  "exports": {
+    ".": "./dist/theme-default.css",
+    "./css": "./dist/theme-default.css",
+    "./scss": "./src/index.scss"
+  },
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "sass src/index.scss dist/theme-default.css",
+    "dev": "sass --watch src/index.scss dist/theme-default.css",
+    "clean": "rm -rf dist .turbo"
+  },
+  "devDependencies": {
+    "sass": "^1.79.4"
+  }
+}

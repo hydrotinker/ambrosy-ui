@@ -1,0 +1,33 @@
+{
+  "name": "@ambrosy-ui/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tsconfig.base.json": "./tsconfig.base.json",
+    "./eslint": "./eslint.config.js",
+    "./prettier": "./prettier.config.js"
+  },
+  "files": [
+    "tsconfig.base.json",
+    "eslint.config.js",
+    "prettier.config.js"
+  ],
+  "scripts": {
+    "lint": "echo \"(config) no sources to lint\"",
+    "clean": "echo \"(config) nothing to clean\""
+  },
+  "dependencies": {
+    "@eslint/js": "^9.12.0",
+    "@typescript-eslint/eslint-plugin": "^8.8.0",
+    "@typescript-eslint/parser": "^8.8.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.28.0",
+    "typescript-eslint": "^8.8.0",
+    "vue-eslint-parser": "^9.4.3"
+  },
+  "peerDependencies": {
+    "eslint": ">=9",
+    "typescript": ">=5"
+  }
+}

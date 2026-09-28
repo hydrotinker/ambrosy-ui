@@ -1,0 +1,39 @@
+/* Checkbox styling for @ambrosy-ui/theme-getisekaid.
+ * Targets the `.ab-checkbox` BEM hooks. Flat selectors + @apply utilities. */
+
+.ab-checkbox {
+  @apply inline-flex flex-col gap-1 font-base;
+}
+
+.ab-checkbox__label {
+  @apply inline-flex items-center gap-2 cursor-pointer;
+}
+
+.ab-checkbox__input {
+  @apply size-4 m-0 cursor-pointer accent-primary;
+}
+
+.ab-checkbox__input:focus-visible {
+  @apply outline-none ring-[3px] ring-primary/40;
+}
+
+.ab-checkbox__text {
+  @apply text-base text-text;
+}
+
+.ab-checkbox--disabled {
+  @apply opacity-60;
+}
+
+.ab-checkbox--disabled .ab-checkbox__label,
+.ab-checkbox--disabled .ab-checkbox__input {
+  @apply cursor-not-allowed;
+}
+
+.ab-checkbox--invalid .ab-checkbox__input {
+  @apply accent-danger outline outline-1 outline-danger;
+}
+
+.ab-checkbox__error {
+  @apply m-0 text-sm text-danger;
+}

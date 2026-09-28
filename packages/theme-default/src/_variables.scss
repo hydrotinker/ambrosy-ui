@@ -1,0 +1,48 @@
+// -----------------------------------------------------------------------------
+// @ambrosy-ui/theme-default — design tokens (SCSS source of truth)
+//
+// These SCSS variables are the canonical token values for the default theme.
+// They are emitted as CSS custom properties in `tokens.scss`; the component
+// partials reference those CSS vars (e.g. `var(--ab-color-primary)`) so runtime
+// theming/overrides work without a rebuild.
+// -----------------------------------------------------------------------------
+
+// Color
+$color-primary: #4f46e5 !default;
+$color-primary-hover: #4338ca !default;
+$color-danger: #dc2626 !default;
+$color-danger-hover: #b91c1c !default;
+$color-text: #1f2937 !default;
+$color-text-muted: #6b7280 !default;
+$color-border: #d1d5db !default;
+$color-surface: #ffffff !default;
+$color-surface-muted: #f3f4f6 !default;
+
+// Spacing scale
+$space-1: 0.25rem !default;
+$space-2: 0.5rem !default;
+$space-3: 0.75rem !default;
+$space-4: 1rem !default;
+$space-6: 1.5rem !default;
+
+// Radius
+$radius-sm: 0.25rem !default;
+$radius-md: 0.5rem !default;
+$radius-lg: 0.75rem !default;
+
+// Typography
+$font-family-base:
+  system-ui,
+  -apple-system,
+  'Segoe UI',
+  roboto,
+  sans-serif !default;
+$font-size-sm: 0.875rem !default;
+$font-size-md: 1rem !default;
+$font-size-lg: 1.125rem !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 600 !default;
+
+// Misc
+$focus-ring: 0 0 0 3px rgba(79, 70, 229, 0.4) !default;
+$transition-base: 150ms ease !default;

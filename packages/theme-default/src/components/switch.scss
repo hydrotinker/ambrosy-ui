@@ -1,0 +1,59 @@
+// Switch styling for @ambrosy-ui/theme-default.
+// Targets the `.ab-switch` BEM hooks emitted by @ambrosy-ui/components.
+
+.ab-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ab-space-2);
+  font-family: var(--ab-font-family-base);
+
+  &__control {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    width: 2.5rem;
+    height: 1.5rem;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background-color: var(--ab-color-border);
+    cursor: pointer;
+    transition: background-color var(--ab-transition-base);
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--ab-focus-ring);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  }
+
+  &__thumb {
+    position: absolute;
+    left: 0.1875rem;
+    width: 1.125rem;
+    height: 1.125rem;
+    border-radius: 50%;
+    background-color: var(--ab-color-surface);
+    transition: transform var(--ab-transition-base);
+  }
+
+  &__text {
+    font-size: var(--ab-font-size-md);
+    color: var(--ab-color-text);
+  }
+
+  &--on {
+    .ab-switch__control {
+      background-color: var(--ab-color-primary);
+    }
+
+    .ab-switch__thumb {
+      transform: translateX(1rem);
+    }
+  }
+}

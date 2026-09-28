@@ -1,0 +1,48 @@
+/* Select styling for @ambrosy-ui/theme-getisekaid.
+ * Targets the `.ab-select` BEM hooks. Flat selectors + @apply utilities. */
+
+.ab-select {
+  @apply flex flex-col gap-1 font-base;
+}
+
+.ab-select__label {
+  @apply text-sm font-semibold text-text;
+}
+
+.ab-select__field {
+  @apply w-full box-border border border-border rounded-md bg-surface text-text
+    cursor-pointer transition-[border-color,box-shadow];
+}
+
+.ab-select__field:focus-visible {
+  @apply outline-none border-primary ring-[3px] ring-primary/40;
+}
+
+.ab-select__field:disabled {
+  @apply cursor-not-allowed bg-surface-muted opacity-70;
+}
+
+.ab-select__field--invalid {
+  @apply border-danger;
+}
+
+.ab-select__field--invalid:focus-visible {
+  @apply border-danger ring-[3px] ring-danger/30;
+}
+
+/* Sizes */
+.ab-select__field--sm {
+  @apply px-2 py-1 text-sm;
+}
+
+.ab-select__field--md {
+  @apply px-3 py-2 text-base;
+}
+
+.ab-select__field--lg {
+  @apply px-4 py-3 text-lg;
+}
+
+.ab-select__error {
+  @apply m-0 text-sm text-danger;
+}

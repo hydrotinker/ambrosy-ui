@@ -1,0 +1,52 @@
+/* Textarea styling for @ambrosy-ui/theme-getisekaid.
+ * Targets the `.ab-textarea` BEM hooks. Flat selectors + @apply utilities. */
+
+.ab-textarea {
+  @apply flex flex-col gap-1 font-base;
+}
+
+.ab-textarea__label {
+  @apply text-sm font-semibold text-text;
+}
+
+.ab-textarea__field {
+  @apply w-full box-border border border-border rounded-md bg-surface text-text
+    resize-y transition-[border-color,box-shadow];
+}
+
+.ab-textarea__field::placeholder {
+  @apply text-text-muted;
+}
+
+.ab-textarea__field:focus-visible {
+  @apply outline-none border-primary ring-[3px] ring-primary/40;
+}
+
+.ab-textarea__field:disabled {
+  @apply cursor-not-allowed bg-surface-muted opacity-70;
+}
+
+.ab-textarea__field--invalid {
+  @apply border-danger;
+}
+
+.ab-textarea__field--invalid:focus-visible {
+  @apply border-danger ring-[3px] ring-danger/30;
+}
+
+/* Sizes */
+.ab-textarea__field--sm {
+  @apply px-2 py-1 text-sm;
+}
+
+.ab-textarea__field--md {
+  @apply px-3 py-2 text-base;
+}
+
+.ab-textarea__field--lg {
+  @apply px-4 py-3 text-lg;
+}
+
+.ab-textarea__error {
+  @apply m-0 text-sm text-danger;
+}

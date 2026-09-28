@@ -1,0 +1,90 @@
+/* Text input styling for @ambrosy-ui/theme-getisekaid.
+ * Targets the `.ab-input` BEM hooks shared by InputText, InputNumber and
+ * InputPassword from @ambrosy-ui/components. Flat selectors + @apply utilities. */
+
+.ab-input {
+  @apply flex flex-col gap-1 font-base;
+}
+
+.ab-input__label {
+  @apply text-sm font-semibold text-text;
+}
+
+.ab-input__wrapper {
+  @apply relative flex items-center;
+}
+
+.ab-input__field {
+  @apply w-full box-border border border-border rounded-md bg-surface text-text
+    transition-[border-color,box-shadow];
+}
+
+.ab-input__field::placeholder {
+  @apply text-text-muted;
+}
+
+.ab-input__field:focus-visible {
+  @apply outline-none border-primary ring-[3px] ring-primary/40;
+}
+
+.ab-input__field:disabled {
+  @apply cursor-not-allowed bg-surface-muted opacity-70;
+}
+
+.ab-input__field--invalid {
+  @apply border-danger;
+}
+
+.ab-input__field--invalid:focus-visible {
+  @apply border-danger ring-[3px] ring-danger/30;
+}
+
+/* Sizes */
+.ab-input__field--sm {
+  @apply px-2 py-1 text-sm;
+}
+
+.ab-input__field--md {
+  @apply px-3 py-2 text-base;
+}
+
+.ab-input__field--lg {
+  @apply px-4 py-3 text-lg;
+}
+
+/* Prefix / suffix icon adornments */
+.ab-input__prefix,
+.ab-input__suffix {
+  @apply absolute inline-flex items-center text-text-muted pointer-events-none;
+}
+
+.ab-input__prefix {
+  @apply left-3;
+}
+
+.ab-input__suffix {
+  @apply right-3;
+}
+
+.ab-input__wrapper:has(.ab-input__prefix) .ab-input__field {
+  @apply pl-9;
+}
+
+.ab-input__wrapper:has(.ab-input__suffix) .ab-input__field,
+.ab-input__wrapper:has(.ab-input__toggle) .ab-input__field {
+  @apply pr-16;
+}
+
+/* Built-in password reveal button */
+.ab-input__toggle {
+  @apply absolute right-2 px-2 py-1 border-none rounded-sm bg-transparent
+    text-primary text-sm font-medium cursor-pointer;
+}
+
+.ab-input__toggle:disabled {
+  @apply cursor-not-allowed text-text-muted;
+}
+
+.ab-input__error {
+  @apply m-0 text-sm text-danger;
+}

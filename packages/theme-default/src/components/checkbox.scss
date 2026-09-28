@@ -1,0 +1,54 @@
+// Checkbox styling for @ambrosy-ui/theme-default.
+// Targets the `.ab-checkbox` BEM hooks emitted by @ambrosy-ui/components.
+
+.ab-checkbox {
+  display: inline-flex;
+  flex-direction: column;
+  gap: var(--ab-space-1);
+  font-family: var(--ab-font-family-base);
+
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--ab-space-2);
+    cursor: pointer;
+  }
+
+  &__input {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    accent-color: var(--ab-color-primary);
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: none;
+      box-shadow: var(--ab-focus-ring);
+    }
+  }
+
+  &__text {
+    font-size: var(--ab-font-size-md);
+    color: var(--ab-color-text);
+  }
+
+  &--disabled {
+    .ab-checkbox__label,
+    .ab-checkbox__input {
+      cursor: not-allowed;
+    }
+
+    opacity: 0.6;
+  }
+
+  &--invalid .ab-checkbox__input {
+    accent-color: var(--ab-color-danger);
+    outline: 1px solid var(--ab-color-danger);
+  }
+
+  &__error {
+    margin: 0;
+    font-size: var(--ab-font-size-sm);
+    color: var(--ab-color-danger);
+  }
+}

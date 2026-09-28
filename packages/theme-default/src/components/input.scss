@@ -1,0 +1,129 @@
+// Text input styling for @ambrosy-ui/theme-default.
+// Targets the `.ab-input` BEM hooks shared by InputText, InputNumber and
+// InputPassword from @ambrosy-ui/components.
+
+.ab-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ab-space-1);
+  font-family: var(--ab-font-family-base);
+
+  &__label {
+    font-size: var(--ab-font-size-sm);
+    font-weight: var(--ab-font-weight-medium);
+    color: var(--ab-color-text);
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__field {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--ab-color-border);
+    border-radius: var(--ab-radius-md);
+    background-color: var(--ab-color-surface);
+    color: var(--ab-color-text);
+    font-family: inherit;
+    transition:
+      border-color var(--ab-transition-base),
+      box-shadow var(--ab-transition-base);
+
+    &::placeholder {
+      color: var(--ab-color-text-muted);
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-color: var(--ab-color-primary);
+      box-shadow: var(--ab-focus-ring);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: var(--ab-color-surface-muted);
+      opacity: 0.7;
+    }
+
+    &--invalid {
+      border-color: var(--ab-color-danger);
+
+      &:focus-visible {
+        border-color: var(--ab-color-danger);
+        box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3);
+      }
+    }
+
+    &--sm {
+      padding: var(--ab-space-1) var(--ab-space-2);
+      font-size: var(--ab-font-size-sm);
+    }
+
+    &--md {
+      padding: var(--ab-space-2) var(--ab-space-3);
+      font-size: var(--ab-font-size-md);
+    }
+
+    &--lg {
+      padding: var(--ab-space-3) var(--ab-space-4);
+      font-size: var(--ab-font-size-lg);
+    }
+  }
+
+  // Prefix / suffix icon adornments.
+  &__prefix,
+  &__suffix {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    color: var(--ab-color-text-muted);
+    pointer-events: none;
+  }
+
+  &__prefix {
+    left: var(--ab-space-3);
+  }
+
+  &__suffix {
+    right: var(--ab-space-3);
+  }
+
+  // Make room for the adornments when present.
+  &__wrapper:has(.ab-input__prefix) .ab-input__field {
+    padding-left: calc(var(--ab-space-6) + var(--ab-space-1));
+  }
+
+  &__wrapper:has(.ab-input__suffix) .ab-input__field,
+  &__wrapper:has(.ab-input__toggle) .ab-input__field {
+    padding-right: calc(var(--ab-space-6) + var(--ab-space-4));
+  }
+
+  // Built-in password reveal button.
+  &__toggle {
+    position: absolute;
+    right: var(--ab-space-2);
+    padding: var(--ab-space-1) var(--ab-space-2);
+    border: none;
+    border-radius: var(--ab-radius-sm);
+    background: transparent;
+    color: var(--ab-color-primary);
+    font: inherit;
+    font-size: var(--ab-font-size-sm);
+    font-weight: var(--ab-font-weight-medium);
+    cursor: pointer;
+
+    &:disabled {
+      cursor: not-allowed;
+      color: var(--ab-color-text-muted);
+    }
+  }
+
+  &__error {
+    margin: 0;
+    font-size: var(--ab-font-size-sm);
+    color: var(--ab-color-danger);
+  }
+}

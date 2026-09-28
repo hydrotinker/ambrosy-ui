@@ -1,0 +1,51 @@
+/* Button styling for @ambrosy-ui/theme-getisekaid.
+ * Targets the unstyled `.ab-button` BEM hooks emitted by @ambrosy-ui/components.
+ * Styles are Tailwind v4 utilities applied via @apply; tokens come from @theme.
+ * BEM element/modifier selectors are written flat (not `&--`/`&__` nested) so the
+ * compiled CSS stays portable through esbuild's stricter nesting parser. */
+
+.ab-button {
+  @apply inline-flex items-center gap-1.5 h-8 px-3 border border-stroke-400 rounded-lg text-xs font-medium cursor-pointer;
+}
+
+.ab-button:focus-visible {
+  @apply outline-none ring-[3px] ring-primary/40;
+}
+
+.ab-button:disabled {
+  @apply cursor-not-allowed opacity-60;
+}
+
+/* Sizes */
+.ab-button--sm {
+  @apply px-3 py-1 text-sm;
+}
+
+.ab-button--md {
+  @apply px-4 py-2 text-base;
+}
+
+.ab-button--lg {
+  @apply px-6 py-3 text-lg;
+}
+
+/* Variants */
+.ab-button--primary {
+  @apply bg-accent-400 border-accent-400 text-white shadow-md shadow-glow-400 enabled:hover:bg-primary-hover;
+}
+
+.ab-button--secondary {
+  @apply bg-bg-300 border-stroke-400 text-text-50 enabled:hover:bg-bg-400 enabled:hover:border-stroke-700;
+}
+
+.ab-button--danger {
+  @apply bg-danger text-white enabled:hover:bg-danger-hover;
+}
+
+.ab-button--block {
+  @apply flex w-full;
+}
+
+.ab-button__spinner {
+  @apply size-[1em] border-2 border-current border-t-transparent rounded-full animate-spin;
+}

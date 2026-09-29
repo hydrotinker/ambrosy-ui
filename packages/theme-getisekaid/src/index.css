@@ -18,8 +18,8 @@
 
 @theme {
   /* Color — warmer, higher-contrast "isekai" palette */
-  --color-primary: #e8590c;
-  --color-primary-hover: #c64a07;
+  --color-primary: #c5075d;
+  --color-primary-hover: #f60974;
   --color-danger: #b4232a;
   --color-danger-hover: #8f1a20;
   --color-text: #1b1714;
